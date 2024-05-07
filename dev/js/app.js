@@ -19,6 +19,7 @@ window.onload = () => {
                     let tr = document.createElement(`tr`);
                     for (let iteratorTwo = 0; iteratorTwo < input; iteratorTwo++) {
                         let td = document.createElement(`td`);
+                        td.innerText = `${((iteratorOne+1) * (iteratorTwo+1))}`;
                         tr.appendChild(td);
                     }
                     tbody.appendChild(tr);
