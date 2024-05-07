@@ -31,10 +31,26 @@ window.onload = () => {
         }
         return input;
     });
-    let promiseThree = promiseTwo.then((input) => {
+    promiseTwo.then((input) => {
         let range = input * input;
         let switchTable = document.querySelectorAll(`table`)[1];
         // For the sentinel, we get the ceiling of the range / 2 to find the middle
         let sentinel = parseInt(((range/2)+((range/2)%1)),10);
+        console.log(sentinel);
+        for (let iterator = 0, row = 1, col = 0; iterator < sentinel; iterator++) {
+            if (!(col === (input - row))) {
+                let tdOne = switchTable.querySelectorAll(`td`)[(iterator)];
+                let tdTwo = switchTable.querySelectorAll(`td`)[(range-(iterator+1))];
+                let temp = tdOne.innerHTML;
+                tdOne.innerHTML = tdTwo.innerHTML;
+                tdTwo.innerHTML = temp;
+            }
+
+            col++;
+            if (col === input) {
+                col = 0;
+                row++;
+            }
+        }
     });
 };
