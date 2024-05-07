@@ -1,6 +1,7 @@
 window.onload = () => {
     // Add your code here
     let promise = new Promise((resolve) => {
+        // get input
         let input = 0;
         while (input < 2) {
             input = parseInt(window.prompt(`Enter an integer greater than 1`), 10);
@@ -15,7 +16,7 @@ window.onload = () => {
         resolve(input);
     });
     let promiseTwo = promise.then((input) => {
-        // Create tables to populate
+        // Create tables to populate and populate them
         for (let tableNumber = 0; tableNumber < 2; tableNumber++) {
             let tbody = document.querySelectorAll(`tbody`)[tableNumber];
             for (let iteratorOne=0, content=1; iteratorOne < input; iteratorOne++) {
@@ -35,6 +36,7 @@ window.onload = () => {
         return input;
     });
     promiseTwo.then((input) => {
+        // Code for flipping across diagonal
         let range = input * input;
         let switchTable = document.querySelectorAll(`table`)[1];
         // For the sentinel, we get the ceiling of the range / 2 to find the middle
