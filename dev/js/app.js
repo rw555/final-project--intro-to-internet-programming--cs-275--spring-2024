@@ -47,7 +47,7 @@ window.onload = () => {
                 tdOne.innerHTML = tdTwo.innerHTML;
                 tdTwo.innerHTML = temp;
             }
-
+            // These variables keep track of the column and row
             col++;
             if (col === input) {
                 col = 0;
