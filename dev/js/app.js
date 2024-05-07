@@ -23,6 +23,9 @@ window.onload = () => {
                 for (let iteratorTwo = 0; iteratorTwo < input; iteratorTwo++) {
                     let td = document.createElement(`td`);
                     td.innerText = `${content}`;
+                    if (iteratorTwo === (input-(iteratorOne+1))) {
+                        td.setAttribute(`class`,`diagonal`);
+                    }
                     tr.appendChild(td);
                     content++;
                 }

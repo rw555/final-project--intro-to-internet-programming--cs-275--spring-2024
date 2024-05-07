@@ -6,3 +6,8 @@ td {
   padding: 8px;
   border: 1px solid black;
 }
+
+.diagonal {
+  background-color: red;
+  color: blueviolet;
+}
