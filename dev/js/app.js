@@ -39,7 +39,6 @@ window.onload = () => {
         let switchTable = document.querySelectorAll(`table`)[1];
         // For the sentinel, we get the ceiling of the range / 2 to find the middle
         let sentinel = parseInt(((range/2)+((range/2)%1)),10);
-        console.log(sentinel);
         for (let iterator = 0, row = 1, col = 0; iterator < sentinel; iterator++) {
             if (!(col === (input - row))) {
                 let tdOne = switchTable.querySelectorAll(`td`)[(iterator)];
