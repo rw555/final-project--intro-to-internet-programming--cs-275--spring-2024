@@ -4,8 +4,12 @@ window.onload = () => {
         let input = 0;
         while (input < 2) {
             input = parseInt(window.prompt(`Enter an integer greater than 1`), 10);
+            if (input < 2) {
+                window.alert(`Integer must be greater than 1. Try again...`);
+            }
             if (isNaN(input)) {
                 input = 0;
+                window.alert(`Invalid input. Try again...`);
             }
         }
         resolve(input);
