@@ -29,5 +29,7 @@ window.onload = () => {
     let promiseThree = promiseTwo.then((input) => {
         let range = input * input;
         let switchTable = document.querySelectorAll(`table`)[1];
+        // For the sentinel, we get the ceiling of the range / 2 to find the middle
+        let sentinel = parseInt(((range/2)+((range/2)%1)),10);
     });
 };
