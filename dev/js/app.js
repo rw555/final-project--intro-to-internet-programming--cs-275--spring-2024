@@ -23,4 +23,11 @@ window.onload = () => {
                 }
                 tbody.appendChild(tr);
             }
+        }
+        return input;
+    });
+    let promiseThree = promiseTwo.then((input) => {
+        let range = input * input;
+        let switchTable = document.querySelectorAll(`table`)[1];
+    });
 };
