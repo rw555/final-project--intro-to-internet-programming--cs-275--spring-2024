@@ -14,12 +14,13 @@ window.onload = () => {
         // Create tables to populate
         for (let tableNumber = 0; tableNumber < 2; tableNumber++) {
             let tbody = document.querySelectorAll(`tbody`)[tableNumber];
-            for (let iteratorOne = 0; iteratorOne < input; iteratorOne++) {
+            for (let iteratorOne=0, content=1; iteratorOne < input; iteratorOne++) {
                 let tr = document.createElement(`tr`);
                 for (let iteratorTwo = 0; iteratorTwo < input; iteratorTwo++) {
                     let td = document.createElement(`td`);
-                    td.innerText = `${((iteratorOne+1) * (iteratorTwo+1))}`;
+                    td.innerText = `${content}`;
                     tr.appendChild(td);
+                    content++;
                 }
                 tbody.appendChild(tr);
             }
